@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.batask.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_singlePostFragment"
+            app:destination="@id/singlePostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/singlePostFragment"
+        android:name="com.example.batask.ui.singlepost.SinglePostFragment"
+        android:label="single_post_fragment"
+        tools:layout="@layout/single_post_fragment" >
+        <argument
+            android:name="post"
+            app:argType="com.example.batask.model.Post" />
+    </fragment>
+</navigation>
